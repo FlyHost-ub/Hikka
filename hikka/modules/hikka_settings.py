@@ -40,7 +40,7 @@ ALL_INVOKES = [
 class HikkaSettingsMod(loader.Module):
     """Advanced settings for Hikka Userbot"""
 
-    strings = {"name": "HikkaSettings"}
+    strings = {"name": "Settings"}
 
     def get_watchers(self) -> tuple:
         return [
