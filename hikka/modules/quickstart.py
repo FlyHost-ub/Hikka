@@ -37,20 +37,17 @@ class QuickstartMod(loader.Module):
                 [
                     {
                         "text": self.strings("btn_support"),
-                        "url": "https://t.me/hikka_talks",
+                        "url": "https://gg.gg/flyhost",
                     }
                 ],
             ]
             + [
                 [
                     {
-                        "text": "👩‍⚖️ Privacy Policy",
-                        "url": "https://docs.google.com/document/d/15m6-pb1Eya8Zn4y0_7JEdvMLAo_v050rFMaWrjDjvMs/edit?usp=sharing",
+                        "text": "bum",
+                        "url": "https://gg.gg/flyhost",
                     },
-                    {
-                        "text": "📜 EULA",
-                        "url": "https://docs.google.com/document/d/1sZBk24SWLBLoGxcsZHW8yP7yLncToPGUP1FJ4dS6z5I/edit?usp=sharing",
-                    },
+                   
                 ]
             ]
             + utils.chunks(
@@ -75,9 +72,9 @@ class QuickstartMod(loader.Module):
             + (
                 "\n"
                 + (
-                    self.strings("FalconHost")
-                    if "FALCON" in os.environ
-                    else (self.strings("lavhost") if "LAVHOST" in os.environ else "")
+                    self.strings("FlyHost")
+                    if "FLY" in os.environ
+                    else (self.strings("lavhost") if "lavhost" in os.environ else "")
                 )
             ).rstrip()
         )
