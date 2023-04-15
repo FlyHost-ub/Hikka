@@ -1,8 +1,4 @@
-# ©️ Dan Gazizullin, 2021-2023
-# This file is a part of Hikka Userbot
-# 🌐 https://github.com/hikariatama/Hikka
-# You can redistribute it and/or modify it under the terms of the GNU AGPLv3
-# 🔑 https://www.gnu.org/licenses/agpl-3.0.html
+
 
 import git
 from hikkatl.tl.types import Message
@@ -16,7 +12,7 @@ from ..inline.types import InlineQuery
 class HikkaInfoMod(loader.Module):
     """Show userbot info"""
 
-    strings = {"name": "HikkaInfo"}
+    strings = {"name": "Info"}
 
     def __init__(self):
         self.config = loader.ModuleConfig(
@@ -35,7 +31,7 @@ class HikkaInfoMod(loader.Module):
             ),
             loader.ConfigValue(
                 "banner_url",
-                "https://github.com/hikariatama/assets/raw/master/hikka_banner.mp4",
+                "https://x0.at/QHiy.jpg",
                 lambda: self.strings("_cfg_banner"),
                 validator=loader.validators.Link(),
             ),
@@ -78,16 +74,16 @@ class HikkaInfoMod(loader.Module):
 
         return (
             (
-                "<b>🌘 Hikka</b>\n"
+                "<b>💀TREEPLUSERBOT</b>\n"
                 if "hikka" not in self.config["custom_message"].lower()
                 else ""
             )
             + self.config["custom_message"].format(
                 me=me,
-                version=_version,
+                version="6.7.7",
                 build=build,
                 prefix=prefix,
-                platform=☁️ FlyHost,
+                platform="☁️ FlyHost",
                 upd=upd,
                 uptime=utils.formatted_uptime(),
                 cpu_usage=utils.get_cpu_usage(),
@@ -97,7 +93,7 @@ class HikkaInfoMod(loader.Module):
             if self.config["custom_message"]
             else (
                 f'<b>{{}}</b>\n\n<b>{{}} {self.strings("owner")}:</b> {me}\n\n<b>{{}}'
-                f' {self.strings("version")}:</b> {_version} {build}\n<b>{{}}'
+                f' {self.strings("version")}:</b> {"6.7.7"} {build}\n<b>{{}}'
                 f' {self.strings("branch")}:'
                 f"</b> <code>{version.branch}</code>\n{upd}\n\n<b>{{}}"
                 f' {self.strings("prefix")}:</b> {prefix}\n<b>{{}}'
@@ -114,7 +110,7 @@ class HikkaInfoMod(loader.Module):
                         (
                             utils.get_platform_emoji()
                             if self._client.hikka_me.premium and not inline
-                            else "🌘 Hikka"
+                            else "💀TREEPLUSERBOT"
                         ),
                         "<emoji document_id=5373141891321699086>😎</emoji>",
                         "<emoji document_id=5469741319330996757>💫</emoji>",
@@ -155,7 +151,7 @@ class HikkaInfoMod(loader.Module):
                 else {"message": self._render_info(True)}
             ),
             "thumb": (
-                "https://github.com/hikariatama/Hikka/raw/master/assets/hikka_pfp.png"
+                "https://x0.at/QHiy.jpg"
             ),
             "reply_markup": self._get_mark(),
         }
